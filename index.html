@@ -1,83 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Encuesta sobre cuidado de la piel</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        background-color: #f9f9f9;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio de Belén Bulacio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #333;
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    #navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #welcome-section {
+      height: 100vh;
+      background: #e6e6e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 4rem;
+    }
+
+    #projects {
+      padding: 4rem 2rem;
+      background: #fff;
+      text-align: center;
+    }
+
+    .project-tile {
+      margin: 1rem auto;
+      background: #f0f0f0;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+
+    .project-tile a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #contact {
+      padding: 2rem;
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+
+    #profile-link {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      #navbar {
+        flex-direction: column;
+        gap: 1rem;
       }
+    }
+  </style>
+</head>
+<body>
 
-      form {
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-      }
+  <nav id="navbar">
+    <a href="#welcome-section">Inicio</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+  </nav>
 
-      label {
-        display: block;
-        margin-top: 15px;
-      }
+  <section id="welcome-section">
+    <h1>Hola, soy Belén Bulacio</h1>
+    <p>Este es mi portfolio como desarrolladora web en formación.</p>
+  </section>
 
-      input, select, textarea {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-      }
+  <section id="projects">
+    <h2>Mis proyectos</h2>
 
-      input[type="radio"], input[type="checkbox"] {
-        width: auto;
-        margin-right: 10px;
-      }
+    <div class="project-tile">
+      <h3>Formulario de Encuesta</h3>
+      <a href="https://belen-bulacio.github.io/portfolio/" target="_blank">Ver proyecto</a>
+    </div>
 
-      button {
-        margin-top: 20px;
-        padding: 10px 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 id="title">Encuesta sobre cuidado de la piel</h1>
-    <p id="description">Queremos conocer tus hábitos para poder recomendarte una rutina ideal.</p>
+    <div class="project-tile">
+      <h3>Tributo a Turing</h3>
+      <a href="https://belen-bulacio.github.io/portfolio/tributoTuring.html" target="_blank">Ver proyecto</a>
+    </div>
 
-    <form id="survey-form">
-      <label id="name-label" for="name">Nombre completo:</label>
-      <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+    <div class="project-tile">
+      <h3>Guía de Git</h3>
+      <a href="https://belen-bulacio.github.io/portfolio/guiaGit.html" target="_blank">Ver proyecto</a>
+    </div>
 
-      <label id="email-label" for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+    <div class="project-tile">
+      <h3>Curso Cuidado de la Piel</h3>
+      <a href="https://belen-bulacio.github.io/portfolio/CursoCuidoPiel.html" target="_blank">Ver proyecto</a>
+    </div>
+  </section>
 
-      <label id="number-label" for="age">Edad:</label>
-      <input type="number" id="number" name="age" min="10" max="99" placeholder="Tu edad" required />
+  <section id="contact">
+    <p>Podés ver más en mi perfil de GitHub:</p>
+    <a id="profile-link" href="https://github.com/Belen-Bulacio" target="_blank">Mi GitHub</a>
+  </section>
 
-      <label for="skin-type">¿Qué tipo de piel tenés?</label>
-      <select id="dropdown" name="skin-type" required>
-        <option disabled selected value>Seleccioná una opción</option>
-        <option value="seca">Seca</option>
-        <option value="mixta">Mixta</option>
-        <option value="grasa">Grasa</option>
-        <option value="sensible">Sensible</option>
-      </select>
-
-      <label>¿Con qué frecuencia seguís una rutina de cuidado facial?</label>
-      <label><input type="radio" name="frecuencia" value="diaria" required />Diariamente</label>
-      <label><input type="radio" name="frecuencia" value="ocasional" />Solo a veces</label>
-      <label><input type="radio" name="frecuencia" value="nunca" />Nunca</label>
-
-      <label>¿Qué productos usás actualmente?</label>
-      <label><input type="checkbox" name="productos" value="limpiador" />Limpiador facial</label>
-      <label><input type="checkbox" name="productos" value="hidratante" />Crema hidratante</label>
-      <label><input type="checkbox" name="productos" value="protector" />Protector solar</label>
-      <label><input type="checkbox" name="productos" value="otros" />Otros</label>
-
-      <label for="sugerencia">¿Qué esperás de una rutina ideal?</label>
-      <textarea id="sugerencia" name="sugerencia" rows="4" placeholder="Escribí tus ideas..."></textarea>
-
-      <button type="submit" id="submit">Enviar</button>
-    </form>
-  </body>
+</body>
 </html>
