@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Documentación Técnica de Git</title>
+    <style>
+      @media (max-width: 600px) {
+    body {
+      background-color: #fce4ec;
+    }
+
+    #navbar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: #ffe0f0;
+    }
+
+    #main-doc {
+      margin-left: 0;
+    }
+  }
+    </style>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header><strong>Guía de Git</strong></header>
+      <a class="nav-link" href="#introducción">Introducción</a>
+      <a class="nav-link" href="#instalación">Instalación</a>
+      <a class="nav-link" href="#primeros_pasos">Primeros pasos</a>
+      <a class="nav-link" href="#comandos_básicos">Comandos básicos</a>
+      <a class="nav-link" href="#ramas_y_merge">Ramas y Merge</a>
+    </nav>
+
+    <main id="main-doc">
+     <section id="introducción" class="main-section">
+    <header>Introducción</header>
+    <p>Git es un sistema de control de versiones distribuido.</p>
+    <p>Permite trabajar de forma colaborativa sin sobrescribir cambios.</p>
+  </section>
+
+  <section id="instalación" class="main-section">
+    <header>Instalación</header>
+    <p>Podés descargar Git desde https://git-scm.com/.</p>
+    <p>Está disponible para Windows, Linux y MacOS.</p>
+  </section>
+
+  <section id="primeros_pasos" class="main-section">
+    <header>Primeros pasos</header>
+    <p>Después de instalar Git, configurá tu identidad:</p>
+    <p><code>git config --global user.name "Tu Nombre"</code></p>
+    <p><code>git config --global user.email "tucorreo@example.com"</code></p>
+  </section>
+
+  <section id="comandos_básicos" class="main-section">
+    <header>Comandos básicos</header>
+    <p>Algunos comandos esenciales son:</p>
+    <ul>
+      <li><code>git init</code>: crea un repositorio</li>
+      <li><code>git add</code>: agrega archivos al staging</li>
+      <li><code>git commit</code>: guarda los cambios</li>
+      <li><code>git status</code>: muestra el estado</li>
+      <li><code>git log</code>: historial de commits</li>
+    </ul>
+    <p>Estos comandos son los más usados por principiantes. </p>
+    </section>
+
+    <section id="ramas_y_merge" class="main-section">
+    <header>Ramas y Merge</header>
+    <p>Git permite trabajar en distintas ramas.</p>
+    <p>Para crear una nueva rama usás:</p>
+    <code>git branch nueva-rama</code>
+    <p>Y para unirla con la rama principal:</p>
+    <code>git merge nueva-rama</code>
+    <p>Usá <code>git checkout</code> para cambiar entre ramas.</p>
+    </section> 
+     
+    </main>
+  </body>
+</html>
